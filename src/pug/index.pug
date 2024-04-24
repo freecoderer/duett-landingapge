@@ -26,28 +26,15 @@ html(lang='en')
 
         // Masthead
         header.masthead
+            video(playsinline='playsinline', autoplay='autoplay', muted='muted', loop='loop')
+                source(src='assets/banner.mp4', type='video/mp4')
             .container.position-relative
                 .row.justify-content-center
                     .col-xl-6
                         .text-center.text-white
-                            // Page heading
-                            h1.mb-5 음악으로 만나는
-                            h1.mb-5 나만의 소울메이트
-                            h1.mb-5 Duett
-                            // Signup form
-
-                            // * * * * * * * * * * * * * * *
-                            // * * SB Forms Contact Form * *
-                            // * * * * * * * * * * * * * * *
-
-                            // This form is pre-integrated with SB Forms.
-                            // To make this form functional, sign up at
-                            // https://startbootstrap.com/solution/contact-forms
-                            // to get an API token!
-
+                            h1.mb-5
+                            h3.mb-5 음악으로 만나는 나만의 소울 메이트 Duett
                             form.form-subscribe#contactForm(data-sb-form-api-token='API_TOKEN')
-
-                                // Email address input
                                 .row
                                     .col
                                         input#emailAddress.form-control.form-control-lg(type='email' placeholder='Email Address' data-sb-validations='required,email')
@@ -55,26 +42,13 @@ html(lang='en')
                                             | Email Address is required.
                                         .invalid-feedback.text-white(data-sb-feedback='emailAddress:email')
                                             | Email Address Email is not valid.
-
                                     .col-auto
                                         button#submitButton.btn.btn-primary.btn-lg.disabled(type='submit') Submit
-
-                                // Submit success message
-                                //
-                                // This is what your users will see when the form
-                                // has successfully submitted
-
                                 #submitSuccessMessage.d-none
                                     .text-center.mb-3
                                         .fw-bolder Form submission successful!
                                         p To activate this form, sign up at
                                         a.text-white(href='https://startbootstrap.com/solution/contact-forms') https://startbootstrap.com/solution/contact-forms
-
-                                // Submit error message
-                                //
-                                // This is what your users will see when there is
-                                // an error submitting the form
-
                                 #submitErrorMessage.d-none
                                     .text-center.text-danger.mb-3 Error sending message!
 
