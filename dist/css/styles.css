@@ -491,11 +491,6 @@ progress {
   font-weight: 300;
 }
 
-.sublead{
-  font-size: 0.7rem;
-  font-weight: 300;
-}
-
 .display-1 {
   font-size: calc(1.625rem + 4.5vw);
   font-weight: 300;
@@ -10921,20 +10916,4 @@ header.masthead h1, header.masthead .h1 {
 footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-
-.text-container {
-  display: flex;
-  align-items: center; /* Optional: This will vertically align the text if the text sizes are different */
-    justify-content: center; /* Optional: This will horizontally align the text if the text sizes are different */
-  gap: 10px; /* Optional: This will add a gap between the texts */
-}
-
-.bandtext{
-  font-size: 1rem;
-}
-
-#changing-text {
-  transition: opacity 0.5s ease-in-out;
-  opacity: 1;
 }
