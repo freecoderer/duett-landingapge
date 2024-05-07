@@ -42,3 +42,16 @@ setInterval(function() {
         }
     }, 500); // Wait for 0.5 seconds (the same duration as the transition)
 }, 2000); // Change the text every 2 seconds
+
+document.getElementById('termsSpan').addEventListener('click', function() {
+    var termsText = document.getElementById('termsText');
+    termsText.style.display = (termsText.style.display === 'none') ? 'block' : 'none';
+});
+
+document.getElementById('contactFormFooter').addEventListener('submit', function(event) {
+    var termsCheckbox = document.getElementById('termsCheckbox');
+    if (!termsCheckbox.checked) {
+        event.preventDefault();
+        alert('개인정보 수집이용에 동의해야 합니다');
+    }
+});

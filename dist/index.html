@@ -32,7 +32,10 @@
                                 <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">이메일 주소가 필요합니다</div>
                                 <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">알맞은 이메일을 입력해주세요</div>
                             </div>
-                            <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">보내기</button></div>
+                            <div class="col-auto"><button class="btn btn-dark btn-lg disabled" id="submitButton" type="submit">보내기</button></div>
+                            <div></div><input type="checkbox" id="termsCheckbox">
+                            <span id="termsSpan">개인정보 수집이용에 동의합니다</span></div>
+                            <div id="termsText" style="display: none;"><img class="responsiveimg" src="./assets/img/termsofuse.png"></div>
                         </div>
                         <div class="d-none" id="submitSuccessMessage">
                             <div class="text-center mb-3">
@@ -54,7 +57,7 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                    <div class="features-icons-icon d-flex"><i class="bi-window m-auto text-primary"></i></div>
+                    <div class="features-icons-icon d-flex"><i class="bi-earbuds m-auto text-primary"></i></div>
                     <h5>음악은 곧 나의 일상!</h5>
                     <p class="lead mb-3">처음 만났을때 가장 많이 하는 대화 주제는 '음악' 입니다</p>
                     <p class="sublead mb-0"> Rentfrow, Peter J., and Samuel D. Gosling. “Message in a Ballad: The Role of Music Preferences in Interpersonal Perception.” Psychological Science 17, no. 3 (2006): 236–42. </p>
@@ -62,7 +65,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                    <div class="features-icons-icon d-flex"><i class="bi-layers m-auto text-primary"></i></div>
+                    <div class="features-icons-icon d-flex"><i class="bi-heart m-auto text-primary"></i></div>
                     <h5>나의 음악 취향은 곧 나의 매력</h5>
                     <p class="lead mb-3">나의 음악 취향은 나의 이성적인 매력을 결정 합니다</p>
                     <p class="sublead mb-0">ZILLMANN, D., & BHATIA, A. (1989). Effects of Associating with Musical Genres on Heterosexual Attraction. Communication Research, 16(2), 263-288. </p>
@@ -70,7 +73,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                    <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
+                    <div class="features-icons-icon d-flex"><i class="bi-emoji-wink m-auto text-primary"></i></div>
                     <h5>힙한 우리는 음악으로 통하니까</h5>
                     <p class="lead mb-3">데이팅 앱에서 비슷한 음악 취향을 가진 사람을 보면 좋아요를 누를 확률 <strong>74%</strong></p>
                     <p class="sublead mb-0">Tick pick – Music Deal Breakers Survey</p>
@@ -123,7 +126,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-2.png" alt="..." />
+                    <img class="img-fluid rounded-circle mb-3" src="assets/img/002.png" alt="..." />
                     <h5>이정혁</h5>
                     <br>
                     <p class="font-weight-light mb-0">"이런거 있었으면 좋겠다고 항상 생각했는데 직접 사용해보니 재미있었습니다"</p>
@@ -131,7 +134,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-3.png" alt="..." />
+                    <img class="img-fluid rounded-circle mb-3" src="assets/img/003.png" alt="..." />
                     <h5>정희선</h5>
                     <br>
                     <p class="font-weight-light mb-0">"덕분에 신선한 경험을 했습니다! 같이 음악을 공유하면서 들을 수 있는 단짝을 만나게 되었어요!"</p>
@@ -166,7 +169,7 @@
                             <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:required">이메일 주소가 필요합니다</div>
                             <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:email">알맞은 이메일을 입력해주세요</div>
                         </div>
-                        <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">보내기</button></div>
+                        <div class="col-auto"><button class="btn btn-dark btn-lg disabled" id="submitButton" type="submit">보내기</button></div>
                     </div>
                     <!-- Submit success message-->
                     <!---->
@@ -194,29 +197,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
-                <ul class="list-inline mb-2">
-                    <li class="list-inline-item"><a href="#!">About</a></li>
-                    <li class="list-inline-item">⋅</li>
-                    <li class="list-inline-item"><a href="#!">Contact</a></li>
-                    <li class="list-inline-item">⋅</li>
-                    <li class="list-inline-item"><a href="#!">Terms of Use</a></li>
-                    <li class="list-inline-item">⋅</li>
-                    <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
-                </ul>
                 <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2023. All Rights Reserved.</p>
-            </div>
-            <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item me-4">
-                        <a href="#!"><i class="bi-facebook fs-3"></i></a>
-                    </li>
-                    <li class="list-inline-item me-4">
-                        <a href="#!"><i class="bi-twitter fs-3"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#!"><i class="bi-instagram fs-3"></i></a>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
