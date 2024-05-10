@@ -48,10 +48,48 @@ document.getElementById('termsSpan').addEventListener('click', function() {
     termsText.style.display = (termsText.style.display === 'none') ? 'block' : 'none';
 });
 
-document.getElementById('contactFormFooter').addEventListener('submit', function(event) {
-    var termsCheckbox = document.getElementById('termsCheckbox');
-    if (!termsCheckbox.checked) {
-        event.preventDefault();
-        alert('개인정보 수집이용에 동의해야 합니다');
+const emailAddressInput = document.getElementById('emailAddress');
+const termsCheckbox = document.getElementById('termsCheckbox');
+// 제출 버튼 요소 가져오기
+const submitButton = document.getElementById('submitButton');
+
+// 이메일 주소 필드 입력 시 유효성 검사
+emailAddressInput.addEventListener('input', function() {
+    validateForm();
+});
+
+// 개인정보 동의 체크박스 상태 변경 시 유효성 검사
+termsCheckbox.addEventListener('change', function() {
+    validateForm();
+});
+
+// 폼 제출 시 이벤트 처리
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // 폼 기본 동작 방지
+    // 여기서 폼을 실제로 제출하는 코드 추가 가능
+    document.getElementById('submitSuccessMessage').classList.remove('d-none'); // 성공 메시지 표시
+    document.getElementById('contactForm').classList.add('d-none'); // 폼 숨기기
+});
+
+// 폼 유효성 검사 함수
+function validateForm() {
+    const emailAddress = emailAddressInput.value; // 이메일 주소 값 가져오기
+    const termsChecked = termsCheckbox.checked; // 체크박스 상태 확인
+
+    // 이메일 주소가 입력되고, 개인정보 동의가 체크되어 있을 때
+    if (emailAddress && termsChecked) {
+        submitButton.disabled = false; // 제출 버튼 활성화
+    } else {
+        submitButton.disabled = true; // 제출 버튼 비활성화
     }
+}
+
+// Disable the submit button initially
+submitButton.disabled = true;
+
+// Add an event listener to the checkbox
+termsCheckbox.addEventListener('change', function() {
+    // If the checkbox is checked, enable the submit button
+    // If the checkbox is not checked, disable the submit button
+    submitButton.disabled = !this.checked;
 });

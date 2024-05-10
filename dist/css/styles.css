@@ -10880,11 +10880,30 @@ footer.footer {
   opacity: 1;
 }
 
-.bi-earbuds, .bi-heart, .bi-emoji-wink {
-  color: black; /* Replace 'red' with the color you want */
+div .bi-earbuds {
+  color: black !important; /* Replace 'red' with the color you want */
+}
+
+div .bi-heart-fill {
+  color: red !important; /* Replace 'red' with the color you want */
+}
+
+div .bi-emoji-wink-fill {
+  color: #FFC300 !important;;
 }
 
 .responsiveimg{
   max-width: 100%;
   height: auto;
+}
+
+.horizontal-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#termsCheckbox {
+  transform: scale(1.5);
 }
