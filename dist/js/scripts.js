@@ -93,3 +93,28 @@ termsCheckbox.addEventListener('change', function() {
     // If the checkbox is not checked, disable the submit button
     submitButton.disabled = !this.checked;
 });
+// Get the elements for the footer form
+// Get the elements for the footer form
+const emailAddressInputFooter = document.getElementById('emailAddressBelow');
+const termsCheckboxFooter = document.getElementById('termsCheckboxBelow'); // Make sure to use a unique ID
+const submitButtonFooter = document.getElementById('submitButton'); // Use 'submitButton' instead of 'submitButtonBelow'
+
+// Add event listeners for the email input and checkbox of the footer form
+emailAddressInputFooter.addEventListener('input', validateFormFooter);
+termsCheckboxFooter.addEventListener('change', validateFormFooter);
+
+// Disable the submit button initially
+submitButtonFooter.disabled = true;
+
+// Form validation function for the footer form
+function validateFormFooter() {
+    const emailAddress = emailAddressInputFooter.value; // Get the email address value
+    const termsChecked = termsCheckboxFooter.checked; // Check the checkbox status
+
+    // If the email address is entered and the checkbox is checked
+    if (emailAddress && termsChecked) {
+        submitButtonFooter.disabled = false; // Enable the submit button
+    } else {
+        submitButtonFooter.disabled = true; // Disable the submit button
+    }
+}
