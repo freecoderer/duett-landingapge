@@ -3,11 +3,6 @@
 * Copyright 2013-2024 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-landing-page/blob/master/LICENSE)
 */
-/*!
-* Start Bootstrap - Landing Page v6.0.6 (https://startbootstrap.com/theme/landing-page)
-* Copyright 2013-2024 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-landing-page/blob/master/LICENSE)
-*/
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
 
@@ -50,61 +45,24 @@ document.getElementById('termsSpan').addEventListener('click', function() {
 
 const emailAddressInput = document.getElementById('emailAddress');
 const termsCheckbox = document.getElementById('termsCheckbox');
-// 제출 버튼 요소 가져오기
 const submitButton = document.getElementById('submitButton');
 
-// 이메일 주소 필드 입력 시 유효성 검사
-emailAddressInput.addEventListener('input', function() {
-    validateForm();
-});
+const emailAddressInputFooter = document.getElementById('emailAddressBelow');
+const termsCheckboxFooter = document.getElementById('termsCheckboxBelow');
+const submitButtonFooter = document.getElementById('submitButton');
 
-// 개인정보 동의 체크박스 상태 변경 시 유효성 검사
-termsCheckbox.addEventListener('change', function() {
-    validateForm();
-});
-
-// 폼 제출 시 이벤트 처리
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // 폼 기본 동작 방지
-    // 여기서 폼을 실제로 제출하는 코드 추가 가능
-    document.getElementById('submitSuccessMessage').classList.remove('d-none'); // 성공 메시지 표시
-    document.getElementById('contactForm').classList.add('d-none'); // 폼 숨기기
-});
-
-// 폼 유효성 검사 함수
+// Form validation function for the main form
 function validateForm() {
-    const emailAddress = emailAddressInput.value; // 이메일 주소 값 가져오기
-    const termsChecked = termsCheckbox.checked; // 체크박스 상태 확인
+    const emailAddress = emailAddressInput.value; // Get the email address value
+    const termsChecked = termsCheckbox.checked; // Check the checkbox status
 
-    // 이메일 주소가 입력되고, 개인정보 동의가 체크되어 있을 때
+    // If the email address is entered and the checkbox is checked
     if (emailAddress && termsChecked) {
-        submitButton.disabled = false; // 제출 버튼 활성화
+        submitButton.disabled = false; // Enable the submit button
     } else {
-        submitButton.disabled = true; // 제출 버튼 비활성화
+        submitButton.disabled = true; // Disable the submit button
     }
 }
-
-// Disable the submit button initially
-submitButton.disabled = true;
-
-// Add an event listener to the checkbox
-termsCheckbox.addEventListener('change', function() {
-    // If the checkbox is checked, enable the submit button
-    // If the checkbox is not checked, disable the submit button
-    submitButton.disabled = !this.checked;
-});
-// Get the elements for the footer form
-// Get the elements for the footer form
-const emailAddressInputFooter = document.getElementById('emailAddressBelow');
-const termsCheckboxFooter = document.getElementById('termsCheckboxBelow'); // Make sure to use a unique ID
-const submitButtonFooter = document.getElementById('submitButton'); // Use 'submitButton' instead of 'submitButtonBelow'
-
-// Add event listeners for the email input and checkbox of the footer form
-emailAddressInputFooter.addEventListener('input', validateFormFooter);
-termsCheckboxFooter.addEventListener('change', validateFormFooter);
-
-// Disable the submit button initially
-submitButtonFooter.disabled = true;
 
 // Form validation function for the footer form
 function validateFormFooter() {
@@ -118,3 +76,15 @@ function validateFormFooter() {
         submitButtonFooter.disabled = true; // Disable the submit button
     }
 }
+
+// Add an event listener to the checkbox
+termsCheckbox.addEventListener('change', validateForm);
+
+// Add an event listener to the email input
+emailAddressInput.addEventListener('input', validateForm);
+
+// Add an event listener to the checkbox
+termsCheckboxFooter.addEventListener('change', validateFormFooter);
+
+// Add an event listener to the email input
+emailAddressInputFooter.addEventListener('input', validateFormFooter);
