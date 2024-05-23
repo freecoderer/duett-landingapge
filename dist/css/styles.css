@@ -265,7 +265,6 @@ pre {
 pre code {
   font-size: inherit;
   color: inherit;
-  word-break: normal;
 }
 
 code {
@@ -5495,7 +5494,6 @@ textarea.form-control-lg {
   text-shadow: none;
   text-transform: none;
   letter-spacing: normal;
-  word-break: normal;
   white-space: normal;
   word-spacing: normal;
   line-break: auto;
@@ -5605,7 +5603,6 @@ textarea.form-control-lg {
   text-shadow: none;
   text-transform: none;
   letter-spacing: normal;
-  word-break: normal;
   white-space: normal;
   word-spacing: normal;
   line-break: auto;
@@ -7968,12 +7965,6 @@ textarea.form-control-lg {
 
 .text-nowrap {
   white-space: nowrap !important;
-}
-
-/* rtl:begin:remove */
-.text-break {
-  word-wrap: break-word !important;
-  word-break: break-word !important;
 }
 
 /* rtl:end:remove */
@@ -10906,4 +10897,8 @@ div .bi-emoji-wink-fill {
 
 #termsCheckbox {
   transform: scale(1.5);
+}
+
+html, form, section, label, body, footer, header, div, span, h1, h2, h3, h4, h5, h6, p, pre {
+  word-break: keep-all;
 }
