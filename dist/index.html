@@ -1,38 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Duett</title>
-    <!-- Favicon 로고 정해지면 바꾸기-->
+    <meta name="description" content="Duett로 나만의 음악 소울메이트를 찾아보세요. 음악 취향을 통해 연결하세요." />
+    <meta name="author" content="Duett 팀" />
+    <title>Duett - 나만의 음악 소울메이트 찾기</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
-    <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-15E130QWZX"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-15E130QWZX');
-</script>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Duett - 나만의 음악 소울메이트 찾기" />
+    <meta property="og:description" content="음악 취향을 통해 Duett로 연결하세요." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://info.duett.bio" />
+    <meta property="og:image" content="https://info.duett.bio/assets/img/logo.png" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Duett - 나만의 음악 소울메이트 찾기" />
+    <meta name="twitter:description" content="음악 취향을 통해 Duett로 연결하세요." />
+    <meta name="twitter:image" content="https://info.duett.bio/assets/img/logo.png" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Duett - 나만의 음악 소울메이트 찾기",
+            "description": "음악 취향을 통해 Duett로 연결하세요.",
+            "url": "https://info.duett.bio"
+        }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-15E130QWZX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-15E130QWZX');
+    </script>
+</head>
 <body>
 <!-- Masthead-->
 <header class="masthead">
-
     <div class="container position-relative">
         <div class="row justify-content-center">
             <div class="col-xl-6">
                 <div class="text-center text-white">
-                    <h1 class="mb-5"></h1>
+                    <h1 class="mb-5">Duett</h1>
                     <h3 class="mb-5">음악으로 만나는 나만의 소울메이트 Duett</h3>
                     <h5 class="mb-2">이메일을 등록하고 가장 먼저 Duett을 사용해 보세요!</h5>
                     <p class="mb-5">등록해 주신 분들에게 서비스가 출시했을 때 메일을 보내드립니다</p>
@@ -80,7 +99,7 @@
                     <div class="features-icons-icon d-flex"><i class="bi-earbuds m-auto text-primary"></i></div>
                     <h5>음악은 곧 나의 일상!</h5>
                     <p class="lead mb-3">처음 만났을 때 가장 많이 하는 대화 주제는 '음악'입니다</p>
-                    <p class="sublead mb-0"> Rentfrow, Peter J., and Samuel D. Gosling. “Message in a Ballad: The Role of Music Preferences in Interpersonal Perception.” Psychological Science 17, no. 3 (2006): 236–42. </p>
+                    <p class="sublead mb-0">Rentfrow, Peter J., and Samuel D. Gosling. “Message in a Ballad: The Role of Music Preferences in Interpersonal Perception.” Psychological Science 17, no. 3 (2006): 236–42.</p>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -88,7 +107,7 @@
                     <div class="features-icons-icon d-flex"><i class="bi-heart-fill m-auto text-primary"></i></div>
                     <h5>나의 음악 취향은 곧 나의 매력</h5>
                     <p class="lead mb-3">나의 음악 취향은 나의 이성적인 매력을 결정합니다</p>
-                    <p class="sublead mb-0">ZILLMANN, D., & BHATIA, A. (1989). Effects of Associating with Musical Genres on Heterosexual Attraction. Communication Research, 16(2), 263-288. </p>
+                    <p class="sublead mb-0">ZILLMANN, D., & BHATIA, A. (1989). Effects of Associating with Musical Genres on Heterosexual Attraction. Communication Research, 16(2), 263-288.</p>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -106,7 +125,7 @@
 <section class="showcase">
     <div class="container-fluid p-0">
         <div class="row g-0">
-            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/001.webp')"></div>
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/001.webp')" aria-label="음악 프로필 카드"></div>
             <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                 <h2>마음에 드는 음악 프로필 카드를 열고 상대를 확인하세요</h2>
                 <br>
@@ -114,7 +133,7 @@
             </div>
         </div>
         <div class="row g-0">
-            <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/002.svg')"></div>
+            <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/002.svg')" aria-label="좋아요와 메시지 보내기"></div>
             <div class="col-lg-6 my-auto showcase-text">
                 <h2>호감이 가는 상대에게 '좋아요'와 메시지를 보내보세요</h2>
                 <br>
@@ -122,7 +141,7 @@
             </div>
         </div>
         <div class="row g-0">
-            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/003.svg')"></div>
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/003.svg')" aria-label="음악으로 가까워지기"></div>
             <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                 <h2>음악으로 가까워지는 우리 둘</h2>
                 <br>
@@ -138,7 +157,7 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img class="img-fluid rounded-circle mb-3" src="assets/img/004.webp" alt="..." />
+                    <img class="img-fluid rounded-circle mb-3" src="assets/img/004.webp" alt="김○○의 후기" />
                     <h5>김○○</h5>
                     <br>
                     <p class="font-weight-light mb-0">"음악 취향을 통해서 상대방과 더욱 가까워졌던 것 같아요! 이번에 같이 실리카겔 보러 가기로 했어요!"</p>
@@ -146,7 +165,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img class="img-fluid rounded-circle mb-3" src="assets/img/005.webp" alt="..." />
+                    <img class="img-fluid rounded-circle mb-3" src="assets/img/005.webp" alt="이○○의 후기" />
                     <h5>이○○</h5>
                     <br>
                     <p class="font-weight-light mb-0">"이런 거 있었으면 좋겠다고 항상 생각했는데 직접 사용해 보니 재미있었습니다"</p>
@@ -154,7 +173,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img class="img-fluid rounded-circle mb-3" src="assets/img/006.webp" alt="..." />
+                    <img class="img-fluid rounded-circle mb-3" src="assets/img/006.webp" alt="정○○의 후기" />
                     <h5>정○○</h5>
                     <br>
                     <p class="font-weight-light mb-0">"덕분에 신선한 경험을 했습니다! 같이 음악을 공유하면서 들을 수 있는 단짝을 만나게 되었어요!"</p>
@@ -173,7 +192,6 @@
                     <p class="bandtext">를 좋아하는 사람을 찾고 싶다면?</p>
                 </div>
                 <form class="form-subscribe" id="contactFormFooter" data-sb-form-api-token="e5baab12-64fe-4f5a-823d-ce7dd24505ef">
-                    <!-- Email address input-->
                     <div class="row">
                         <div class="col">
                             <input class="form-control form-control-lg" id="emailAddressBelow" type="email" placeholder="이메일 주소" data-sb-validations="required,email" />
@@ -188,21 +206,13 @@
                             <label for="termsCheckbox" id="termsSpan"><u>개인정보 수집 이용에 동의합니다</u> &nbsp;</label>
                             <input type="checkbox" id="termsCheckboxBelow">
                         </div>
-                        <div id="termsText" style="display: none;"><img class="responsiveimg" src="./assets/img/termsofuse.webp"></div>
+                        <div id="termsText" style="display: none;"><img class="responsiveimg" src="./assets/img/termsofuse.webp" alt="이용약관"></div>
                     </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
                     <div class="d-none" id="submitSuccessMessage">
                         <div class="text-center mb-3">
                             <div class="fw-bolder">성공적으로 보냈습니다!</div>
                         </div>
                     </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">전송 오류!</div></div>
                 </form>
             </div>
@@ -226,10 +236,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->
 <script src="js/scripts.js"></script>
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-<!-- * *                               SB Forms JS                               * *-->
-<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<!-- SB Forms JS-->
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 </html>

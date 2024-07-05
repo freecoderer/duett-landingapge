@@ -1,0 +1,26 @@
+# Allow all bots to access important content
+User-agent: *
+Disallow:
+
+# Block bots from accessing admin and private directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Block bots from accessing specific files
+Disallow: /secret-page.html
+
+# Block bots from accessing CSS and JS directories if they're not critical
+Disallow: /css/
+Disallow: /js/
+
+# Allow Googlebot to access everything
+User-agent: Googlebot
+Disallow:
+
+# Block all bots from accessing a specific folder
+User-agent: *
+Disallow: /no-bots/
+
+# Sitemap location
+Sitemap: https://info.duett.bio/sitemap.xml
